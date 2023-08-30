@@ -1,4 +1,4 @@
-module uart(input wire [7:0] din,
+module tt_um_jminz_uart(input wire [7:0] din,
 	    input wire wr_en,
 	    input wire clk_50m,
 	    output wire tx,
