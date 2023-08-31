@@ -9,7 +9,7 @@ TOPLEVEL_LANG ?= verilog
 ifneq ($(GATES),yes)
 
 # this is the only part you should need to modify:
-VERILOG_SOURCES += $(PWD)/testbench.v $(PWD)/uart.v $(PWD)/receiver.v $(PWD)/transmitter.v
+VERILOG_SOURCES += $(PWD)/testbench.v $(PWD)/tt_um_jminz_uart.v $(PWD)/receiver.v $(PWD)/transmitter.v
 
 else
 
@@ -39,7 +39,7 @@ include $(shell cocotb-config --makefiles)/Makefile.sim
 # all:	lint testbench
 
 # lint:	$(wildcard *.v)
-# 	verilator --lint-only uart.v
+# 	verilator --lint-only tt_um_jminz_uart.v
 
 # testbench:	$(wildcard *.v)
 # 	iverilog -Wall testbench.v -o $@

@@ -2,7 +2,7 @@
  * Simple testbench for UART.  Loop the rx and tx pins to each other and send
  * incrementing bytes, make sure that we receive what we expected.
  */
-`include "uart.v"
+`include "tt_um_jminz_uart.v"
 
 module uart_tx_test();
 
@@ -17,7 +17,7 @@ wire [7:0] rxdata;
 wire loopback;
 reg rdy_clr = 0;
 
-uart test_uart(.din(data),
+tt_um_jminz_uart test_uart(.din(data),
 	       .wr_en(enable),
 	       .clk_50m(clk),
 	       .tx(loopback),
@@ -28,7 +28,7 @@ uart test_uart(.din(data),
 	       .dout(rxdata));
 
 initial begin
-	$dumpfile("uart.vcd");
+	$dumpfile("tt_um_jminz_uart.vcd");
 	$dumpvars(0, uart_tx_test);
 	enable <= 1'b1;
 	#2 enable <= 1'b0;

@@ -34,17 +34,39 @@ documentation:
 
 # Instructions on how someone could test your project, include things like what buttons do what and how to set the clock if needed
   how_to_test:  |
-      After reset,
+      After reset, data=1 will be feed in and it will be transmitted to receiver and the data increment by 1 till reach 0xFF
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:
-    - foo
+    - din_00
+    - din_01
+    - din_02
+    - din_03
+    - din_04
+    - din_05
+    - din_06
+    - din_07
+    - wr_en
+    - clk_50m
+    - rx
+    - rdy_clr
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
-    - foo
+    - dout_00
+    - dout_01
+    - dout_02
+    - dout_03
+    - dout_04
+    - dout_05
+    - dout_06
+    - dout_07
+    - tx
+    - tx_busy
+    - rdy
 # A description of what the bidirectional I/O pins do (e.g. I2C SDA, I2C SCL, etc)
   bidirectional:
-    - foo
+    - temp_00
+    - temp_01
 
 # The following fields are optional
   tag:          "timer, test"      # comma separated list of tags: test, encryption, experiment, clock, animation, utility, industrial, pwm, fpga, alu, microprocessor, risc, riscv, sensor, signal generator, fft, filter, music, bcd, sound, serial, timer, random number generator, calculator, decoder, counter, puzzle, multiplier, game, oscillator,
